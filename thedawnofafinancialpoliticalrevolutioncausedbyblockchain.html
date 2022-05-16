@@ -1,1 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Stance</title>
 
+    <!-- Tailwind -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+        .font-family-karla {
+            font-family: karla;
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+</head>
+<body class="bg-white font-family-karla">
+
+    <nav class="w-full py-4 bg-gray-700">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
+
+            <div>
+                <ul class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
+                    <li><a class="hover:text-gray-200 px-4" href="about.html">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="flex items-center text-lg no-underline text-white pr-6">
+                <a class="hover:text-gray-200" href="https://www.facebook.com/profile.php?id=100080910956926">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a class="pl-6 hover:text-gray-200" href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="pl-6 hover:text-gray-200" href="https://twitter.com/StanceModern">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Text Header -->
+    <header class="w-full container mx-auto">
+        <div class="flex flex-col items-center py-12">
+            <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="index.html">
+                Modern Stance
+            </a>
+            <p class="text-lg text-gray-600">
+                Spreading a stance on the issues of modern life
+            </p>
+        </div>
+    </header>
+
+    <nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
+        <div class="block sm:hidden">
+            <a
+                href="#"
+                class="block md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
+                @click="open = !open"
+            >
+                Topics <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
+            </a>
+        </div>
+        <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+            <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                <a href="stem.html" class="hover:text-gray-500 py-2 px-4 mx-2">STEM</a>
+                <a href="politics.html" class="hover:text-gray-500 py-2 px-4 mx-2">Politics</a>
+                <a href="finance.html" class="hover:text-gray-500 py-2 px-4 mx-2">Finance</a>
+                <a href="music.html" class="hover:text-gray-500 py-2 px-4 mx-2">Music</a>
+                <a href="culture.html" class="hover:text-gray-500 py-2 px-4 mx-2">Culture</a>
+                <a href="sports.html" class="hover:text-gray-500 py-2 px-4 mx-2">Sports</a>
+                <a href="games.html" class="hover:text-gray-500 py-2 px-4 mx-2">Games</a>
+              </div>
+        </div>
+    </nav>
+
+    <section class="py-20 xl:pt-24 xl:pb-28 bg-white" style="background-image: url('flex-ui-assets/elements/pattern-white.svg'); background-position: center;">
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-wrap -mx-4">
+            <div class="w-full lg:w-1/2 px-4 mb-5 lg:mb-0">
+              <span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-white bg-gray-500 font-medium uppercase rounded">Culture</span>
+              <h3 class="mb-5 text-3xl md:text-4xl text-coolGray-900 font-bold tracking-tighter">Should we be worried about global population growth?</h3>
+              <p class="mb-5 text-lg font-medium leading-7 text-coolGray-500">From around 1500 to 1750, the global population was at an estimated 500 million. Then, from 1750 to 1950, the global population started gradually increasing and reached around 2.5 billion. From 1950 to the present day, the global population has been in exponential growth and today, the global population is estimated to be 7.9 billion. The reasons for such an increase in global population are better nutrition and advances in medicine. Therefore, fewer people are dying, and more people are being treated and saved by doctors. However, considering the global death rate is decreasing and the global birth rate has roughly stayed the same throughout history, the global birth and death rates are unequal, therefore the global population is rapidly increasing.</p>
+              <p class="mb-5 text-lg font-medium leading-7 text-coolGray-500">On one hand, I believe that we should be worried about global population growth. This is because, if the global population’s exponential growth continues, there may not be enough space or resources to accommodate everyone on Earth. It is estimated that the global population will reach 10 billion people in 2050. However, the Earth’s carrying capacity is limited. Many studies say that the world can accommodate between 8 and 16 billion people, which is both calming and distressing.</p>
+              <p class="text-lg font-medium leading-7 text-coolGray-500">On the other hand, I believe that we shouldn’t be worried to such an extent about global population growth. This is because the Earth’s carrying capacity is still greater than the current global population. Also, a higher global population may also benefit the Earth’s economy and will provide a greater work force. In this way, a high global population may be viewed as an advantage to the world.</p>
+            </div>
+            <div class="w-full lg:w-1/2 px-4">
+              <p class="mb-5 text-lg font-medium leading-7 text-coolGray-500">
+                <span>Overall, I believe that we should be worried about population growth. Considering the global population’s exponential growth, sooner or later, the Earth won’t be able to accommodate any more people. In the near future, I believe that certain measures must be taken to prevent the Earth from overpopulating, for example, a limit on how many children are born to a family. Back in 1980, the Chinese government implemented the one-child policy that limited Chinese families to only one child each, due to the country’s population growth being too rapid. China abolished this law in 2015, after realising that this law didn’t benefit the population in the way that it should have. This was because firstly, like most Asian nations, China has a traditional bias for sons, leading them to abort or murder baby girls to ensure a son. This led to a huge gender imbalance; in 2011, there were 34 million more men than women in China. Furthermore, due to many men not having a spouse, there was a great increase in crime rate. All this, of course, didn’t benefit the Chinese government at all. Hopefully, enforcing a global limit on children per family will be more effective than the Chinese one-child policy, and will slow down the global population increase and eventually steady it.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="text-gray-600 body-font">
+        <div class="container py-5 mx-auto">
+          <div class="mx-6 py-10 text-center md:text-left">
+            <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div class="">
+                <h6 class="
+                    uppercase
+                    font-semibold
+                    mb-4
+                    flex
+                    items-center
+                    justify-center
+                    md:justify-start
+                  ">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cubes"
+                    class="w-4 mr-3" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                      d="M488.6 250.2L392 214V105.5c0-15-9.3-28.4-23.4-33.7l-100-37.5c-8.1-3.1-17.1-3.1-25.3 0l-100 37.5c-14.1 5.3-23.4 18.7-23.4 33.7V214l-96.6 36.2C9.3 255.5 0 268.9 0 283.9V394c0 13.6 7.7 26.1 19.9 32.2l100 50c10.1 5.1 22.1 5.1 32.2 0l103.9-52 103.9 52c10.1 5.1 22.1 5.1 32.2 0l100-50c12.2-6.1 19.9-18.6 19.9-32.2V283.9c0-15-9.3-28.4-23.4-33.7zM358 214.8l-85 31.9v-68.2l85-37v73.3zM154 104.1l102-38.2 102 38.2v.6l-102 41.4-102-41.4v-.6zm84 291.1l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6zm240 112l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6z">
+                    </path>
+                  </svg>
+                  Modern Stance
+                </h6>
+                <p>
+                    Spreading a stance on the issues of modern life
+
+
+                </p>
+              </div>
+              <div class="">
+                <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                  Links
+                </h6>
+                <p class="mb-4">
+                  <a href="about.html" class="text-gray-600">About Us</a>
+                </p>
+                <p class="mb-4">
+                  <a href="mailto: stancemodern@gmail.com" class="text-gray-600">Contact Us</a>
+                </p>
+              </div>
+              <div class="">
+                <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                  Terms
+                </h6>
+                <p class="mb-4">
+                  <a href="#!" class="text-gray-600">Terms and Conditions</a>
+                </p>
+                <p class="mb-4">
+                  <a href="#!" class="text-gray-600">Privacy Policy</a>
+                </p>
+              </div>
+              <div class="">
+                <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                  Contact
+                </h6>
+                <p class="flex items-center justify-center md:justify-start mb-4">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope"
+                    class="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                      d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
+                    </path>
+                  </svg>
+                  stancemodern@gmail.com
+                </p>
+                <p class="flex items-center justify-center md:justify-start mb-4">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone"
+                    class="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                      d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z">
+                    </path>
+                  </svg>
+                  +44 07 895 595 913
+                </p>
+                <a class="hover:text-gray-500" href="https://www.facebook.com/profile.php?id=100080910956926">
+                  <i class="fab fa-facebook"></i>
+              </a>
+              <a class="pl-6 hover:text-gray-500" href="#">
+                  <i class="fab fa-instagram"></i>
+              </a>
+              <a class="pl-6 hover:text-gray-500" href="https://twitter.com/StanceModern">
+                  <i class="fab fa-twitter"></i>
+              </a>
+              </div>
+            </div>
+          </div>
+          <div class="text-center p-6">
+            <span>© 2021 Copyright:</span>
+            <a class="text-gray-600 font-semibold" href="index.html">Modern Stance</a>
+          </div>
+        </div>
+    
+      </section>
+</body>
+</html>
